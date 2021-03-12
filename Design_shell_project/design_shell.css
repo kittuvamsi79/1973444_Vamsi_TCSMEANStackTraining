@@ -1,0 +1,29 @@
+.h2Class{
+    font-style: italic;
+    background-color: yellowgreen;
+    color: gainsboro;
+    width:300px;
+
+}
+
+.divClass{
+
+    width: 500px;
+    height: 170px;
+    text-align: center;
+    font-size: 50px;
+    border-style: dashed;
+
+}
+
+.buttonClass{
+    background-color: grey;
+    border-radius: 10px;
+    width: 80px;
+    height: 40px;
+    
+}
+.buttonClass:hover{
+    background-color: teal;
+}
+
