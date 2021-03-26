@@ -1,0 +1,33 @@
+<h5>
+    Welcome to our website {{user}} 
+</h5>
+
+<input type="text" 
+           placeholder="Name" 
+           name="name"
+           [(ngModel)] = "enteredname" 
+           required>
+<br>
+<br>
+<label for="uname"><b>Last Name</b></label>
+<br> 
+<input type="number" 
+        placeholder="Phone Number" 
+        name="phone" 
+        [(ngModel)] = "enteredphonenumber"
+        required>
+<br>
+<br>
+<button type="submit"
+            (click)="saveuser()">Save</button>
+
+<table>
+    <tr ng-repeat="listuser in users">
+        <td>{{listuser.name}}</td>
+        <td>{{listuser.phonenumber}}</td>
+    </tr>
+</table>
+
+            
+
+    

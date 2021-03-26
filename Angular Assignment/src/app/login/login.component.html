@@ -1,0 +1,43 @@
+<form >
+      
+    <div class="container">
+
+        <h3>Login Form</h3>
+      <label for="uname"><b>Username</b></label>
+      <br> 
+      <input type="text" 
+             placeholder="Enter Username"
+             name="uname" 
+            [(ngModel)] = "username"
+             required
+             >
+  
+      <br>
+      <br>
+      <label for="psw"><b>Password</b></label>
+      <br>
+
+      <input type="password" 
+             placeholder="Enter Password" 
+             name="psw" 
+             required
+             [(ngModel)]="password"
+             >
+      <br>
+      <br>
+      <button type="submit"
+              (click)="login()">Login</button>  
+      <br>
+      <br>
+      <button type="button" class="cancelbtn" routerLink="/register">SignUp</button>
+
+      <div *ngIf="!isValid">
+        Please enter valid credentials
+      </div>
+
+    </div>
+  
+    <br>
+
+   
+  </form>
