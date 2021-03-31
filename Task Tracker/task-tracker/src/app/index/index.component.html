@@ -1,0 +1,41 @@
+
+<label>ID:  </label>
+<input type="text" name="id" [(ngModel)]="id" placeholder="ID" />
+<br>
+<br>
+<label>Name:   </label>
+<input type="text" name="name" [(ngModel)]="name" placeholder="Name" />
+<br>
+<br>
+<label>Task:   </label>
+<input type="text" name="task" [(ngModel)]="task" placeholder="Task" />
+<br>
+<br>
+<label>Dead Line:   </label>
+<input type="date" name="deadLine" [(ngModel)]="deadLine" placeholder="DeadLine" />
+<br>
+<br>
+<input type="button" value="Submit Form" (click)="submitForm()">
+<input type="button" value="Reset" (click)="resetForm()">
+
+<br>
+<br>
+
+<div class="container">
+    <table class="table table-responsive table-striped">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Task</th>
+        <th>Dead Line</th>
+      </tr>
+      <tr *ngFor="let row of rows">
+        <td>{{row.id}}</td>
+        <td>{{row.name}}</td>
+        <td>{{row.task}}</td>
+        <td>{{row.deadLine}}</td>
+      </tr>
+    </table>
+<div>
+  
+
