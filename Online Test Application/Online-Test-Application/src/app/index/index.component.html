@@ -1,0 +1,315 @@
+<h2>Please answer the following questions:</h2>
+
+<p>1. Who is the president of United States?</p>
+<div *ngFor="let option1 of options1">
+    <label>
+        <input
+        type="radio"
+        name="option1"
+        [(ngModel)]="selectedAnswer1"
+        [value]="option1"
+        (change)="incrementscore(option1)">
+        {{option1}}
+    </label>
+
+</div>
+
+<p>2. National game of India</p>
+<div *ngFor="let option2 of options2">
+    <label>
+        <input
+        type="radio"
+        name="option2"
+        [(ngModel)]="selectedAnswer2"
+        [value]="option2"
+        (change)="incrementscore(option2)">
+        {{option2}}
+    </label>
+
+</div>
+
+<p>3. Capital of India</p>
+<div *ngFor="let option3 of options3">
+    <label>
+        <input
+        type="radio"
+        name="option3"
+        [(ngModel)]="selectedAnswer3"
+        [value]="option3"
+        (change)="incrementscore(option3)">
+        {{option3}}
+    </label>
+</div>
+
+<p>4. Number of Continents in world</p>
+<div *ngFor="let option4 of options4">
+    <label>
+        <input
+        type="radio"
+        name="option4"
+        [(ngModel)]="selectedAnswer4"
+        [value]="option4"
+        (change)="incrementscore(option4)">
+        {{option4}}
+    </label>
+</div>
+
+<p>5. Number of Oceans in world</p>
+<div *ngFor="let option5 of options5">
+    <label>
+        <input
+        type="radio"
+        name="option5"
+        [(ngModel)]="selectedAnswer5"
+        [value]="option5"
+        (change)="incrementscore(option5)">
+        {{option5}}
+    </label>
+</div>
+
+<p>6. Capital of Texas</p>
+<div *ngFor="let option6 of options6">
+    <label>
+        <input
+        type="radio"
+        name="option6"
+        [(ngModel)]="selectedAnswer6"
+        [value]="option6"
+        (change)="incrementscore(option6)">
+        {{option6}}
+    </label>
+</div>
+
+<p>7. Prime Minister of India</p>
+<div *ngFor="let option7 of options7">
+    <label>
+        <input
+        type="radio"
+        name="option7"
+        [(ngModel)]="selectedAnswer7"
+        [value]="option7"
+        (change)="incrementscore(option7)">
+        {{option7}}
+    </label>
+</div>
+
+<p>8. Founder of Facebook</p>
+<div *ngFor="let option8 of options8">
+    <label>
+        <input
+        type="radio"
+        name="option8"
+        [(ngModel)]="selectedAnswer8"
+        [value]="option8"
+        (change)="incrementscore(option8)">
+        {{option8}}
+    </label>
+</div>
+
+<p>9. GOvernor of Texas</p>
+<div *ngFor="let option9 of options9">
+    <label>
+        <input
+        type="radio"
+        name="option9"
+        [(ngModel)]="selectedAnswer9"
+        [value]="option9"
+        (change)="incrementscore(option9)">
+        {{option9}}
+    </label>
+</div>
+
+<p>10. Founder of TATA Group</p>
+<div *ngFor="let option10 of options10">
+    <label>
+        <input
+        type="radio"
+        name="option7"
+        [(ngModel)]="selectedAnswer10"
+        [value]="option10"
+        (change)="incrementscore(option10)">
+        {{option10}}
+    </label>
+</div>
+
+<br>
+
+<input type="button" value="Submit" (click)="submitexam()">
+    
+
+<br>
+
+<div *ngIf="isPassed" style="color: green;">
+    <h4>Congratulations!! You Passed. Your Score: {{score}}/10</h4>
+</div>
+
+<div *ngIf="isFailed" style="color: red;">
+    <h4>Sorry!! You Failed. Your Score: {{score}}/10</h4>
+</div>
+
+
+
+<!-- <form>
+
+    <p>1. Who is the president of United States?</p>
+    <div *ngFor="let option1 of options">
+        <label class="radio-inline">
+            <input
+            type="radio"
+            name="option1"
+            [(ngModel)]="selectedAnswer"
+            [value]="option1"
+            (click)="incrementscore(option1)">
+            {{option1}}
+        </label>
+    </div>
+    
+    
+    <p>2. Who is the president of United States?</p>
+    <div *ngFor="let option2 of options2">
+        <label class="radio-inline">
+            <input
+            type="radio"
+            name="option2"
+            [(ngModel)]="selectedAnswer1"
+            [value]="option2"
+            (click)="incrementscore(option2)">
+            {{option2}}
+        </label>
+    </div>
+    
+   
+    <p>3. Who is the president of United States?</p>
+    <div *ngFor="let option3 of options3">
+        <label class="radio-inline">
+            <input
+            type="radio"
+            name="option3"
+            [(ngModel)]="selectedAnswer2"
+            [value]="option3"
+            (click)="incrementscore(option3)">
+            {{option3}}
+        </label>
+    </div>
+   
+    
+    <p>4. Who is the president of United States?</p>
+    <div *ngFor="let option of options">
+        <label class="radio-inline">
+            <input
+            type="radio"
+            name="option4"
+            [(ngModel)]="selectedAnswer"
+            [value]="option"
+            (click)="incrementscore(option)">
+            {{option}}
+        </label>
+    </div>
+    <div *ngIf="isCorrect" style="color: green;">
+        Selected Answer is Correct
+    </div>
+    
+    <p>5. Who is the president of United States?</p>
+    <div *ngFor="let option of options">
+        <label class="radio-inline">
+            <input
+            type="radio"
+            name="option5"
+            [(ngModel)]="selectedAnswer"
+            [value]="option"
+            (click)="incrementscore(option)">
+            {{option}}
+        </label>
+    </div>
+    <div *ngIf="isCorrect" style="color: green;">
+        Selected Answer is Correct
+    </div>
+  
+    <p>6. Who is the president of United States?</p>
+    <div *ngFor="let option of options">
+        <label class="radio-inline">
+            <input
+            type="radio"
+            name="option6"
+            [(ngModel)]="selectedAnswer"
+            [value]="option"
+            (click)="incrementscore(option)">
+            {{option}}
+        </label>
+    </div>
+    <div *ngIf="isCorrect" style="color: green;">
+        Selected Answer is Correct
+    </div>
+    
+    <p>7. Who is the president of United States?</p>
+    <div *ngFor="let option of options">
+        <label class="radio-inline">
+            <input
+            type="radio"
+            name="option7"
+            [(ngModel)]="selectedAnswer"
+            [value]="option"
+            (click)="incrementscore(option)">
+            {{option}}
+        </label>
+    </div>
+    <div *ngIf="isCorrect" style="color: green;">
+        Selected Answer is Correct
+    </div>
+    
+    <p>8. Who is the president of United States?</p>
+    <div *ngFor="let option of options">
+        <label class="radio-inline">
+            <input
+            type="radio"
+            name="option8"
+            [(ngModel)]="selectedAnswer"
+            [value]="option"
+            (click)="incrementscore(option)">
+            {{option}}
+        </label>
+    </div>
+    <div *ngIf="isCorrect" style="color: green;">
+        Selected Answer is Correct
+    </div>
+    
+    <p>9. Who is the president of United States?</p>
+    <div *ngFor="let option of options">
+        <label class="radio-inline">
+            <input
+            type="radio"
+            name="option9"
+            [(ngModel)]="selectedAnswer"
+            [value]="option"
+            (click)="incrementscore(option)">
+            {{option}}
+        </label>
+    </div>
+    <div *ngIf="isCorrect" style="color: green;">
+        Selected Answer is Correct
+    </div>
+    
+    <p>10. Who is the president of United States?</p>
+    <div *ngFor="let option of options">
+        <label class="radio-inline">
+            <input
+            type="radio"
+            name="option10"
+            [(ngModel)]="selectedAnswer"
+            [value]="option"
+            (click)="incrementscore(option)">
+            {{option}}
+        </label>
+    </div>
+    <div *ngIf="isCorrect" style="color: green;">
+        Selected Answer is Correct
+    </div>
+   
+
+    
+    <br>
+    
+    
+
+</form> -->
+
